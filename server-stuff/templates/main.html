@@ -1,0 +1,22 @@
+<html>
+    <head><title>Testing </title></head>
+    <body>
+        <button type="button" onclick = "getLog()"">Click to get log</button>
+        <p id = "transcript"></p>
+
+    </body>
+
+<script>
+    
+    function getLog(){
+        fetch('log.txt')
+        .then((response) => {
+            return response.text();
+        })
+        .then((text) => {
+            console.log(text);
+        })
+    };
+</script>
+
+</html>
